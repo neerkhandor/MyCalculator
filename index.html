@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCalculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculator
+    </h1>
+    <div class="container">
+       
+        <div class="calculator">
+            
+            <form>
+                <div class="display">
+                <input id="input_display" type="text" name="display">
+                </div>
+                <div>
+                    <input type="button" value="AC" class="operation" onclick="display.value=''">
+                    <input type="button" value="DEL" class="operation" onclick="display.value=display.value.toString().slice(0,-1)">
+                    <input type="button" value="." class="operation" onclick="input_display.value+='.'">
+                    <input type="button" value="/" class="operation" onclick="display.value+='/'">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="display.value+='7'">
+                    <input type="button" value="8" onclick="display.value+='8'">
+                    <input type="button" value="9" onclick="display.value+='9'">
+                    <input type="button" value="*" class="operation" onclick="display.value+='*'">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="display.value+='4'">
+                    <input type="button" value="5" onclick="display.value+='5'">
+                    <input type="button" value="6" onclick="display.value+='6'">
+                    <input type="button" value="-" class="operation" onclick="display.value+='-'">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="display.value+='1'">
+                    <input type="button" value="2" onclick="display.value+='2'">
+                    <input type="button" value="3" onclick="display.value+='3'">
+                    <input type="button" value="+" class="operation" onclick="display.value+='+'">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="display.value+='00'">
+                    <input type="button" value="0" onclick="display.value">
+                    <input type="button" id="equal" class="operation" value="=" onclick="display.value=eval(display.value)">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<!-- In the code "onclick=display.value+='7'", "display.value" refers to the value of an HTML form element. The ".value" property is a built-in property of form elements in JavaScript and is used to access or set the value of an HTML input field.
+
+In this case, the "display" variable is likely referencing an HTML input field where the value of the button click will be displayed. When the button is clicked, the value of the input field is updated by adding "7" to its current value.
+
+You can use a different variable name instead of "display" if you prefer, as long as it is referencing the correct HTML form element. For example, if you have an input field with an ID of "output", you could modify the code as follows: "onclick=output.value+='7'". The important thing is to ensure that the variable is correctly referencing the desired form element.  -->
+<!-- "flex: 1" is a CSS shorthand property that is used to define the flexible length of a flex item in a flex container.
+
+In CSS Flexbox layout, a flex container is a parent element that contains one or more flex items. The "flex" property is used to define the size of a flex item relative to other flex items in the same flex container.
+
+The "flex" property is a shorthand property that combines three individual properties: "flex-grow", "flex-shrink", and "flex-basis". The "flex: 1" declaration is a shortcut that sets the values of all three properties to the same value:
+
+"flex-grow": This property determines how much a flex item will grow relative to other flex items in the same container. A value of "1" means the flex item will take up all the available space in the container.
+
+"flex-shrink": This property determines how much a flex item will shrink relative to other flex items in the same container. A value of "1" means the flex item will shrink to fit the available space in the container.
+
+"flex-basis": This property determines the initial size of a flex item before any remaining space is distributed. A value of "0%" means the flex item will start at zero width or height.
+
+Therefore, when "flex: 1" is applied to a flex item, it means that the item will grow or shrink as needed to fill the available space in the container. This is commonly used to create flexible layouts where the size of the items adjusts based on the available space. -->
